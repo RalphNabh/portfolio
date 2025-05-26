@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground)); /* In front of background */
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-card: hsl(var(--card));
+  /* When start, text will fade in with diffrent versions, we also have general fade-in that will be applied to every version
+    we also have a float animation to the hero section, and a pulse subtle for the stars as infinitly running it */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+  --animate-fade-in: fade-in 6s ease-in-out forwards;
+  --animate-fade-in-delay-1: fade-in 0.6s ease-in-out 0.2s forwards;
+  --animate-fade-in-delay-2: fade-in 0.6s ease-in-out 0.3s forwards;
+  --animate-fade-in-delay-3: fade-in 0.6s ease-in-out 0.4s forwards;
+  --animate-fade-in-delay-4: fade-in 0.6s ease-in-out 0.5s forwards;
+  --animate-meteor: meteor 5s linear infinite;
+
+
+  /* Template coppied from Github tailwind cosmic theme for fade ins and animation */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  @keyframes pulse-subtle {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes meteor {
+    0% {
+      transform: rotate(215deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(215deg) translateX(-500px);
+      opacity: 0;
+    }
+  }
+}
+/* I defined a root version and a dark version using HSL is my prefrence instead of using RGB*/
+@layer base {
+:root { 
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+
+    --primary: 250 47% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+  }
+
+  .dark {
+    --background: 222 47% 4%;
+    --foreground: 213 31% 91%;
+
+    --card: 222 47% 8%;
+
+    --primary: 250 65% 65%;
+    --primary-foreground: 213 31% 91%;
+
+    --border: 217 33% 20%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@utility container { /* Can be called anywhere and will apply containers specified below */
+  margin-inline: auto;
+  padding-inline: 2rem;
+
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility text-glow { /* RGBA so we can add opacity (0.5)  */
+  @apply relative;
+  text-shadow: 0 0 10px rgba(167, 139, 250, 0.4);
+}
+
+@utility card-hover { /* this will apply a transition when hovering so it will outscale the card  */
+  @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+}
+/* in tailwindcss the @apply will apply a tailwind based style instead a css style*/
+
+@utility gradient-border { /* this will be applied to our cards, meaning will apply the card variable */
+  @apply relative rounded-md;
+  background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+  background-clip: padding-box;
+  border: 1px solid transparent;
+}
+
+@utility cosmic-button { /* button that we'll be using i added a lot of styling since this will really emerse and attract */
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium 
+         transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+         hover:scale-105 active:scale-95;
+}
+
+@utility star {
+  @apply absolute rounded-full bg-white;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5);
+}
+
+@utility meteor { /* to create gradient in tailwind we do: starts from white colour to transparent*/
+  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.4);
+}
+
+#root { /* Basics elements add margin and padding to 0 or else will look weird*/
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+
+}
