@@ -8,10 +8,10 @@ function App() {
   return (
     <> 
     <Toaster />
-    <BrowserRouter>
+    <BrowserRouter basename="/portfolio">
     <Routes>
-      <Route index element ={<Home />} />
-      <Route path="*" element={<NotFound />} /> {/*what this means is that everything that hasnt been defined will default to NotFound*/}
+    <Route path="/" element={<Home />} />
+    <Route path="*" element={<NotFound />} /> {/*what this means is that everything that hasnt been defined will default to NotFound*/}
     </Routes>
     </BrowserRouter>
     </>

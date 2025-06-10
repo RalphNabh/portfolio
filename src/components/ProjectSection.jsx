@@ -7,8 +7,8 @@ const projects = [
     description: "Service Site",
     image: "/projects/project1.png",
     tags: ["CodeLanguage", "CodeLanguage", "CodeLanguage"],
-    demoUrl: "#",
-    githubUrl: "#",
+    demoUrl: "http://127.0.0.1:5500/index.html#price",
+    githubUrl: "https://github.com/LuxeMobileCare/luxemobilecare.github.io.git",
   },
   {
     id: 2,
@@ -100,7 +100,7 @@ export const ProjectSection = () => {
           <a
             className="cosmic-button w-fit flex items-center mx-auto gap-2"
             target="_blank"
-            href="https://github.com/machadop1407"
+            href="https://github.com/RalphNabh?tab=repositories"
           >
             Check My Github <ArrowRight size={16} />
           </a>

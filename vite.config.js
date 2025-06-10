@@ -6,6 +6,7 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({ //Makes is so we can import componenets using @ instead of directly refrencing source folder 
   plugins: [react(), tailwindcss()],
+  base: 'portfolio',
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
