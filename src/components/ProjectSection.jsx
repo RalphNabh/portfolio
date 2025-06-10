@@ -5,7 +5,7 @@ const projects = [
     id: 1,
     title: "Project 1",
     description: "Service Site",
-    image: "/projects/project1.png",
+    image: "img/Screenshot 2025-06-09 at 11.50.00 PM.png",
     tags: ["CodeLanguage", "CodeLanguage", "CodeLanguage"],
     demoUrl: "http://127.0.0.1:5500/index.html#price",
     githubUrl: "https://github.com/LuxeMobileCare/luxemobilecare.github.io.git",
