@@ -1,24 +1,25 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
-
+import project1 from "../assets/img/project1.png"
+import project2 from "../assets/img/project2.png"
 const projects = [
   {
     id: 1,
     title: "Project 1",
     description: "Service Site",
-    image: "img/Screenshot 2025-06-09 at 11.50.00 PM.png",
-    tags: ["CodeLanguage", "CodeLanguage", "CodeLanguage"],
-    demoUrl: "http://127.0.0.1:5500/index.html#price",
+    image: project1,
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://luxemobilecare.github.io",
     githubUrl: "https://github.com/LuxeMobileCare/luxemobilecare.github.io.git",
   },
   {
     id: 2,
     title: "Project 2",
     description:
-      "Game",
-    image: "/projects/project2.png",
-    tags: ["CodeLanguage", "CodeLanguage", "CodeLanguage"],
-    demoUrl: "#",
-    githubUrl: "#",
+      "Memory Game",
+    image: project2,
+    tags: ["Rust", "TypeScript", "Python"],
+    demoUrl: "http://localhost:5178",
+    githubUrl: "https://github.com/MemoryGameSEG/memory-nexus.git",
   },
   {
     id: 3,
