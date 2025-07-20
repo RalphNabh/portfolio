@@ -2,6 +2,8 @@ import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import project1 from "../assets/img/project1.png"
 import project2 from "../assets/img/project2.png"
 import project3 from "../assets/img/project3.png"
+import project4 from "../assets/img/project4.png";
+
 const projects = [
   {
     id: 1,
@@ -32,6 +34,16 @@ const projects = [
     demoUrl: "https://chroniqo.github.io/chroniqo/",
     githubUrl: "#",
   },
+  {
+    id: 4,
+    title: "Stock Dashboard",
+    description: "Real-time bilingual stock tracker with live graphs",
+    image: project4,
+    tags: ["React", "Vite", "Chart.js", "i18next"],
+    demoUrl: "https://ralphnabh.github.io/stock-dashboard/",
+    githubUrl: "https://github.com/RalphNabh/stock-dashboard",
+  },
+  
 ];
 
 export const ProjectSection = () => {
