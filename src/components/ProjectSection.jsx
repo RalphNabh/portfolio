@@ -1,6 +1,7 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import project1 from "../assets/img/project1.png"
 import project2 from "../assets/img/project2.png"
+import project3 from "../assets/img/project3.png"
 const projects = [
   {
     id: 1,
@@ -26,9 +27,9 @@ const projects = [
     title: "Project 3",
     description:
       "E-commerce",
-    image: "/projects/project3.png",
-    tags: ["CodeLanguage", "CodeLanguage", "CodeLanguage"],
-    demoUrl: "#",
+    image: project3,
+    tags: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://chroniqo.github.io/chroniqo/",
     githubUrl: "#",
   },
 ];
