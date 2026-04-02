@@ -1,5 +1,7 @@
 import { Briefcase, Code, User } from "lucide-react";
 
+const resumePdfUrl = `${import.meta.env.BASE_URL}ralph_resume.pdf`;
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
@@ -21,19 +23,27 @@ export const AboutSection = () => {
             </p>
 
             <p className="text-muted-foreground">
-            Lately, I’ve been combining my interest in tech and finance through projects like a real-time 
-            stock analyzer, bringing live data to life through code.
+            My centerpiece build is DeluxePro CRM—construction ops, AI hooks, and a founder arc that ends in
+            a negotiated sale and carried equity—alongside tools like a real-time stock analyzer that brings
+            live data to life through code.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
-                {" "}
                 Get In Touch
               </a>
-
               <a
-                href="https://docs.google.com/document/d/1SDtEij6VZE3xzbBc2-Xgo9xo8WANxnbl/edit?usp=sharing&ouid=117679710715167985760&rtpof=true&sd=true"
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+                href={resumePdfUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center"
+              >
+                View resume
+              </a>
+              <a
+                href={resumePdfUrl}
+                download="Ralph_Nabhan_Resume.pdf"
+                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center"
               >
                 Download CV
               </a>
