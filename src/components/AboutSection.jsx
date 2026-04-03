@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Briefcase, Code, User } from "lucide-react";
 
 const resumePdfUrl = `${import.meta.env.BASE_URL}ralph_resume.pdf`;
@@ -32,14 +33,12 @@ export const AboutSection = () => {
               <a href="#contact" className="cosmic-button">
                 Get In Touch
               </a>
-              <a
-                href={resumePdfUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/resume"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300 text-center"
               >
                 View resume
-              </a>
+              </Link>
               <a
                 href={resumePdfUrl}
                 download="Ralph_Nabhan_Resume.pdf"

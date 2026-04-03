@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"; //nav and routing letting me build multipage experience without refreshing the page
 import { Home } from "./pages/Home";
+import { Resume } from "./pages/Resume";
 import { NotFound } from "./pages/NotFound";
 import { Toaster } from "./components/ui/toaster";
 
@@ -11,6 +12,7 @@ function App() {
     <BrowserRouter basename="/portfolio">
     <Routes>
     <Route path="/" element={<Home />} />
+    <Route path="/resume" element={<Resume />} />
     <Route path="*" element={<NotFound />} /> {/*what this means is that everything that hasnt been defined will default to NotFound*/}
     </Routes>
     </BrowserRouter>

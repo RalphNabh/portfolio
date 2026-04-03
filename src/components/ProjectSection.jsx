@@ -1,21 +1,9 @@
 import { ArrowRight, ExternalLink, Github, Sparkles } from "lucide-react";
 import project1 from "../assets/img/project1.png";
 import project2 from "../assets/img/project2.png";
-import project3 from "../assets/img/project3.png";
 import project4 from "../assets/img/project4.png";
 
 const projects = [
-  {
-    id: "deluxepro",
-    title: "DeluxePro CRM",
-    description:
-      "Co-founded a production-grade CRM tailored for construction teams—sales pipelines, estimates and invoicing, task management, workflow automation, payments, and reporting—with AI-assisted features wired through modern APIs.",
-    image: project3,
-    tags: ["Full-Stack", "AI & APIs", "Payments", "Automation"],
-    demoUrl: "https://www.linkedin.com/in/ralphnabhan",
-    githubUrl: null,
-    demoLabel: "LinkedIn",
-  },
   {
     id: "stock-dashboard",
     title: "Stock Dashboard",
